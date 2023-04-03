@@ -13,7 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
-
+            position: relative;
         }
 
         td, th {
@@ -29,8 +29,22 @@
         }
 
         thead, tfoot {
-            background-color: coral;
+            background-color: blue;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: blue;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
         }
 
         td.num {
